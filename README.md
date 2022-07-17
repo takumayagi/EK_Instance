@@ -13,7 +13,6 @@ This repository contains training and evaluation code for object instance identi
 
 ## Requirements
 * Python 3.9+
-* gnureadline
 * ffmpeg
 * numpy
 * opencv-python
@@ -91,6 +90,19 @@ python train.py --dataset epic --model ResNet34MeanProj --method paired --batch_
 # N-pair
 python train.py --dataset epic --model ResNet34MeanProj --method paired --batch_size 64 --nb_dims 256 --cluster_alg hac --stride 2 --eval --resume pretrained/paired_ResNet34MeanProj_epic.pth --eval_hac_dists 0.6 --eval_split test
 ```
+
+### Visualization
+```
+# Check statistics
+python utils/vis_annotation.py --stats --pids configs/valid_pids.txt
+# Extract object images
+python utils/vis_annotation.py --patch --pids configs/valid_pids.txt
+# Visualize object images as mp4 videos
+python utils/vis_annotation.py --video --pids configs/valid_pids.txt
+# Visualize a list of object images as a single image
+python utils/vis_annotation.py --summary --pids configs/valid_pids.txt --out_path valid_image_list.jpg
+```
+<img src="assets/epic22_teaser.gif" width="200" >
 
 ## Authors
 * Takuma Yagi (tyagi[at]iis.u-tokyo.ac.jp)
