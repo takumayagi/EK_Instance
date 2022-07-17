@@ -3,7 +3,6 @@ This repository includes the codes and data of the EK-Instance dataset, a challe
 Please check the paper ["Object Instance Identification in Dynamic Environments"](https://arxiv.org/abs/2206.05319) for details.
 
 <img src="assets/epic22_teaser.png" width="600" >
-<img src="assets/epic22_teaser.gif" width="200" >
 
 This repository contains training and evaluation code for object instance identification.
 
